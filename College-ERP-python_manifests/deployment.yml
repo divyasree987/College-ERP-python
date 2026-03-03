@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: collegeERP-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: collegeERP
+  template:
+    metadata:
+      labels:
+        app: collegeERP
+    spec:
+      containers:
+      - name: collegeERP
+        image: divya9866/python-ultimate-cicd:replaceImageTag
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
