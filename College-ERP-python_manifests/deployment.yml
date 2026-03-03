@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: collegeERP-deployment
+  name: college-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: collegeERP
+      app: college
   template:
     metadata:
       labels:
-        app: collegeERP
+        app: college
     spec:
       containers:
-      - name: collegeERP
+      - name: college
         image: divya9866/python-ultimate-cicd:15
         imagePullPolicy: Always
         ports:
