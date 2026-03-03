@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: collegeERP
-        image: divya9866/python-ultimate-cicd:replaceImageTag
+        image: divya9866/python-ultimate-cicd:15
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
